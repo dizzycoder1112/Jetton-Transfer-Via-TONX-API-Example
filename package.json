@@ -1,0 +1,21 @@
+{
+  "name": "jetton-transfer-tonx-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DizzyCode",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@ton/core": "^0.59.0",
+    "@ton/crypto": "^3.3.0",
+    "@ton/ton": "^15.1.0",
+    "@tonx/core": "^1.1.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
