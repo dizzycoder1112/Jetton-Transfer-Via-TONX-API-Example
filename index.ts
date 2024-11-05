@@ -45,12 +45,14 @@ export class Wallet {
           workchain: 0,
           publicKey: keyPair.publicKey,
         })
+        this.keyPair = keyPair
         break
       case WalletType.V5:
         this.contract = WalletContractV5R1.create({
           workchain: 0,
           publicKey: keyPair.publicKey,
         })
+        this.keyPair = keyPair
         break
       default:
         throw new Error('Invalid wallet type')
@@ -61,7 +63,7 @@ export class Wallet {
     try {
       const keyPair = await mnemonicToPrivateKey(mnemonic)
 
-      return new Wallet(keyPair)
+      return new Wallet(keyPair, walletType)
     }
     catch (error) {
       throw new Error('wallet init failed')
